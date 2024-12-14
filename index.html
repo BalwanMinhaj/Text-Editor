@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./script.js" defer></script>
+    <title>Text Editor</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <div class="font-wrapper">
+                <select id="fontName" class="adv-btn"></select>
+                <select id="fontSize" class="adv-btn"></select>
+            </div>
+
+            <div class="text-wrapper">
+                <button id="bold" class="btn format">
+                    <i class="ph-bold ph-text-b"></i>
+                </button>
+                <button id="italic" class="btn format">
+                    <i class="ph-bold ph-text-italic"></i>
+                </button>
+                <button id="underline" class="btn format">
+                    <i class="ph-bold ph-text-underline"></i>
+                </button>
+                <button id="strikeThrough" class="btn format">
+                    <i class="ph-bold ph-text-strikethrough"></i>
+                </button>
+            </div>
+
+            <div class="script-wrapper">
+                <button id="subScript" class="btn script">
+                    <i class="ph-bold ph-text-subscript"></i>
+                </button>
+                <button id="superScript" class="btn script">
+                    <i class="ph-bold ph-text-superscript"></i>
+                </button>
+            </div>
+
+            <div class="color-wrapper">
+                <input type="color" value="#000000" id="foreColor" class="adv-btn">
+                <div class="highlighter">
+                    <input type="color" value="#ffffff" id="backColor" class="adv-btn">
+                    <i class="ph-bold ph-highlighter"></i>
+                </div>
+            </div>
+
+            <div class="order-wrapper">
+                <button id="insertOrderedList" class="btn list">
+                    <i class="ph-bold ph-list-numbers"></i>
+                </button>
+                <button id="insertUnorderedList" class="btn list">
+                    <i class="ph-bold ph-list-bullets"></i>
+                </button>
+            </div>
+
+            <div class="insert-wrapper">
+                <button id="createLink" class="adv-btn">
+                    <i class="ph-bold ph-link"></i>
+                </button>
+                <button id="unlink" class="btn">
+                    <i class="ph-bold ph-link-break"></i>
+                </button>
+                <div class="image-btn">
+                    <input id="insertImage" type="file" accept="image/*">
+                    <i class="ph-bold ph-image"></i>
+                </div>
+            </div>
+
+            <div class="justify-wrapper">
+                <button id="justifyLeft" class="btn align">
+                    <i class="ph-bold ph-text-align-left"></i>
+                </button>
+                <button id="justifyCenter" class="btn align">
+                    <i class="ph-bold ph-text-align-center"></i>
+                </button>
+                <button id="justifyRight" class="btn align">
+                    <i class="ph-bold ph-text-align-right"></i>
+                </button>
+                <button id="justifyFull" class="btn align">
+                    <i class="ph-bold ph-text-align-justify"></i>
+                </button>
+            </div>
+
+            <div class="tab-wrapper">
+                <button id="indent" class="btn spacing">
+                    <i class="ph-bold ph-text-indent"></i>
+                </button>
+                <button id="outdent" class="btn spacing">
+                    <i class="ph-bold ph-text-outdent"></i>
+                </button>
+            </div>
+
+            <button class="btn">
+                <i class="ph-bold ph-arrows-out-simple fullscreen"></i>
+            </button>
+        </div>
+        <div class="editor" id="editor" contenteditable="true"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+} img {
+    max-width: 100%;
+}
+/* input {
+    all: unset;
+} */
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-color: #f0f0f0;
+    color: #161719;
+}
+
+.header {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1.2rem 1rem;
+    background: #fff;
+    white-space: nowrap;
+    overflow-x: auto;
+} .header::-webkit-scrollbar {
+    display: none;
+} .header button {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.65rem;
+    width: 2.25rem;
+    font-size: 1rem;
+    padding: 0.15rem;
+    border-radius: 4px;
+} .header .btn.active {
+    background: #c7dbfe;
+    color: #2b50d2;
+} .ph-bold {
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.tab-wrapper, .justify-wrapper,
+.insert-wrapper, .order-wrapper,
+.color-wrapper, .text-wrapper,
+.font-wrapper, .script-wrapper {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0 0.25rem;
+    padding: 0.35rem;
+    position: relative;
+    border-radius: 8px;
+    padding: 0 1.25rem 0 1rem;
+} .justify-wrapper::after,
+.insert-wrapper::after, .order-wrapper::after,
+.color-wrapper::after, .text-wrapper::after,
+.font-wrapper::after, .script-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 1px;
+    background: #e3e6e9;
+}
+
+.font-wrapper select {
+    all: unset;
+    background: rgba(238, 238, 238, 1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.color-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+} .color-wrapper #foreColor {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+} .color-wrapper #foreColor::-webkit-color-swatch {
+    border-radius: 4px;
+} .color-wrapper #foreColor::-moz-color-swatch {
+    border-radius: 4px;
+}
+
+.insert-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.image-btn,
+.highlighter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} .image-btn input,
+.highlighter input {
+    opacity: 0;
+    z-index: 999;
+    height: 1.65rem;
+    width: 2.25rem;
+    cursor: pointer;
+} .image-btn .ph-bold,
+.highlighter .ph-bold {
+    position: absolute;
+}
+
+.editor {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    max-width: min(1440px, 100% - 2rem);
+    width: 100%;
+    margin: 1rem auto;
+    outline: 0;
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
